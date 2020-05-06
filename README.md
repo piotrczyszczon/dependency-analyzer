@@ -1,14 +1,14 @@
-#Overview
+# Overview
 Wrapper for jdeps tool. Created mainly because documentation of jdeps is weak and it does not fully explain output format. Especially when it is used to analyze recursive/multi-level dependencies.
 
 This tool is designed in the way it calls jdeps to analyze class dependencies of source jar file so familiarity with jdeps will be helpful.
 
-#Usage
+# Usage
 As that tool works by invoking jdeps command it should be available on PATH when running it.
 ```
 dependency-analyzer <configuration_file>
 ```
-#Example configuration file
+# Example configuration file
 ```yaml
 ---
 # Tool will analyze source jar file and look for dependencies. It will search for dependencies only withing classpath
@@ -37,9 +37,9 @@ maximumLevel: 1
 ...
 ```
 
-#Output format 
+# Output format 
 
-##When maximumLevel: 1
+## When maximumLevel: 1
 
 Here we can only see dependencies from sourceJar to targetJar so output can have following form
 ```yaml
@@ -50,7 +50,7 @@ first_class_in_source_jar -> second_class_in_target_jars
 second_class_in_source_jar -> first_class_in_target_jar
 ```
 
-##When maximumLevel: > 1
+## When maximumLevel: > 1
 Here we show dependencies of source jar and dependencies of their dependencies.
 
 Each dependency level is separated by tab. On first level we have straight dependencies from source jar to target jar.
@@ -62,5 +62,5 @@ Then in next levels each dependency is analyzed recursively their dependencies a
         ...
 ```
 
-#Performance
+# Performance
 Because we are running jdeps as separate process under the hood it's quite slow. So it's ususaly better to narrow amount of analyzed classes with usage of regular expressions in configuration.
