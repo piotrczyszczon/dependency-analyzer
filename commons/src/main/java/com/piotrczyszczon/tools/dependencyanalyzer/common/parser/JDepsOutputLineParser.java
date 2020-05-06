@@ -18,6 +18,10 @@ public class JDepsOutputLineParser
     {
       return parseDependencyLine(jDepsOutputLine);
     }
+    else
+    {
+      return Optional.empty();
+    }
   }
 
   private Optional<Dependency> parseDependencyLine(String jDepsOutputLine)
