@@ -1,0 +1,10 @@
+**/target
+**/*.iml
+**/.idea/
+**/.idea/artifacts
+**/.idea/dictionaries
+**/.idea/libraries
+**/.idea/shelf
+**/.idea/workspace.xml
+**/.idea/dataSources.xml
+**/.idea/deployment.xml
