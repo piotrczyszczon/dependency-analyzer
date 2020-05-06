@@ -22,6 +22,6 @@ public class MultiLevelDependencyAnalyzerFacade implements JarDependencyAnalyzer
 
   private MultiLevelDependencies executeDependencyAnalyzer(Arguments arguments) throws IOException
   {
-    return createMultiLevelDependencyAnalyzer(arguments).execute(arguments.getSourcejar(), arguments.getSourceClassesRegex());
+    return createMultiLevelDependencyAnalyzer(arguments).execute(arguments.getSourceJar(), arguments.getSourceClassesRegex());
   }
 }

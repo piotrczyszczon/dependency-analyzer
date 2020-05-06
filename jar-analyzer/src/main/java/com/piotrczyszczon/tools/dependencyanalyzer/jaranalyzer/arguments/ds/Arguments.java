@@ -5,7 +5,7 @@ import java.util.List;
 public class Arguments
 {
   private List<String> classPath;
-  private String sourcejar;
+  private String sourceJar;
   private String sourceClassesRegex;
   private String dependencyJarRegex;
   private String dependencyClassesRegex;
@@ -22,14 +22,14 @@ public class Arguments
     this.classPath = classPath;
   }
 
-  public String getSourcejar()
+  public String getSourceJar()
   {
-    return sourcejar;
+    return sourceJar;
   }
 
-  public void setSourcejar(String sourcejar)
+  public void setSourceJar(String sourceJar)
   {
-    this.sourcejar = sourcejar;
+    this.sourceJar = sourceJar;
   }
 
   public String getSourceClassesRegex()

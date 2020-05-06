@@ -23,6 +23,6 @@ public class SingleLevelJarDependencyAnalyzerFacade implements JarDependencyAnal
 
   private List<JarClassDependency> executeDependencyAnalyzer(Arguments arguments) throws IOException
   {
-    return createJarDependencyAnalyzer(arguments).execute(arguments.getSourcejar(), arguments.getSourceClassesRegex());
+    return createJarDependencyAnalyzer(arguments).execute(arguments.getSourceJar(), arguments.getSourceClassesRegex());
   }
 }
