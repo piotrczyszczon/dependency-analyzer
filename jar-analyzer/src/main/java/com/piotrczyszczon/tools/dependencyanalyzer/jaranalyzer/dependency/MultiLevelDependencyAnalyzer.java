@@ -1,5 +1,6 @@
 package com.piotrczyszczon.tools.dependencyanalyzer.jaranalyzer.dependency;
 
+import com.piotrczyszczon.tools.dependencyanalyzer.jaranalyzer.arguments.ds.Arguments;
 import com.piotrczyszczon.tools.dependencyanalyzer.jaranalyzer.dependency.ds.JarClassDependency;
 import com.piotrczyszczon.tools.dependencyanalyzer.jaranalyzer.dependency.ds.MultiLevelDependencies;
 
@@ -55,5 +56,10 @@ public class MultiLevelDependencyAnalyzer
   private int increaseLevel(int currentLevel)
   {
     return currentLevel + 1;
+  }
+
+  public static MultiLevelDependencyAnalyzer createMultiLevelDependencyAnalyzer(Arguments arguments)
+  {
+    return new MultiLevelDependencyAnalyzer(JarDependencyAnalyzer.createJarDependencyAnalyzer(arguments), ClassDependencyAnalyzer.createClassDependencyAnalyzer(arguments), arguments.getMaximumLevel());
   }
 }

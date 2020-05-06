@@ -57,7 +57,7 @@ public class MultiLevelDependenciesPrinter
     }
     else
     {
-      Collections.emptyList();
+      return Collections.emptyList();
     }
   }
 }
