@@ -3,6 +3,7 @@ Wrapper for jdeps tool. Created mainly because documentation of jdeps is weak an
 
 This tool is designed in the way it calls jdeps to analyze class dependencies of source jar file so familiarity with jdeps will be helpful.
 
+### @Note: Tools currently works with jdk8. In newer version jdps API has changed and is not supported yet.
 # Usage
 As that tool works by invoking jdeps command it should be available on PATH when running it.
 ```
